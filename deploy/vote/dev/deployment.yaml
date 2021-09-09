@@ -11,5 +11,5 @@ spec:
   template:
     spec:
       containers:
-      - image: nginx:1.21.1
+      - image: nginx:7.21.1
         name: nginx
