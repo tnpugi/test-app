@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-redis
+  name: test-redis
+  namespace: test-gitops-staging
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
