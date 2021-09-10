@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: test-redis
+  name: test-redis
+  namespace: test-gitops
+spec:
+  ports:
+  - name: 8080-80
+    port: 8080
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: test-redis
+  type: ClusterIP
+status:
+  loadBalancer: {}
